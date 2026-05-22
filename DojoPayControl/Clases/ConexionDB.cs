@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DojoPayControl.Clases
 {
-    internal class ConexipmDB
+    internal class ConexionDB
     {
     }
 }
