@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace DojoPayControl.Clases
 {
@@ -79,29 +75,31 @@ namespace DojoPayControl.Clases
 
             try
             {
-                //Conectar C# con SQL Server
+                // Conectar C# con MySQL
                 conexion.AbrirConexion();
 
-                string consulta = "INSERT INTO Estudiantes " +
-                                  "(Nombre, Cedula, Telefono, FechaIngreso, Estado) " +
-                                  "VALUES (@Nombre, @Cedula, @Telefono, @FechaIngreso, @Estado)";
-                // Crear un comando SQL
-                SqlCommand comando = new SqlCommand(consulta, conexion.Conexion);
+                string consulta = "INSERT INTO Estudiante " +
+                                  "(nombre, cedula, telefono, fechaIngreso, estado) " +
+                                  "VALUES (@nombre, @cedula, @telefono, @fechaIngreso, @estado)";
+
+                // Crear un comando MySQL
+                MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+
                 // Agregar parámetros al comando
-                comando.Parameters.AddWithValue("@Nombre", nombre);
-                comando.Parameters.AddWithValue("@Cedula", cedula);
-                comando.Parameters.AddWithValue("@Telefono", telefono);
-                comando.Parameters.AddWithValue("@FechaIngreso", fechaIngreso);
-                comando.Parameters.AddWithValue("@Estado", estado);
+                comando.Parameters.AddWithValue("@nombre", nombre);
+                comando.Parameters.AddWithValue("@cedula", cedula);
+                comando.Parameters.AddWithValue("@telefono", telefono);
+                comando.Parameters.AddWithValue("@fechaIngreso", fechaIngreso);
+                comando.Parameters.AddWithValue("@estado", estado);
 
                 // Ejecutar el comando
                 comando.ExecuteNonQuery();
-                // Mostrar mensaje de éxito
+
                 Console.WriteLine("Estudiante registrado correctamente.");
-            }// Manejar excepciones
+            }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                Console.WriteLine("Error al registrar estudiante: " + ex.Message);
             }
             finally
             {
@@ -112,13 +110,87 @@ namespace DojoPayControl.Clases
         // Método Editar
         public void Editar()
         {
-            Console.WriteLine("Método Editar en construcción.");
+            ConexionDB conexion = new ConexionDB();
+
+            try
+            {
+                conexion.AbrirConexion();
+
+                string consulta = "UPDATE Estudiante SET " +
+                                  "nombre = @nombre, " +
+                                  "cedula = @cedula, " +
+                                  "telefono = @telefono, " +
+                                  "fechaIngreso = @fechaIngreso, " +
+                                  "estado = @estado " +
+                                  "WHERE idEstudiante = @idEstudiante";
+
+                MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+
+                comando.Parameters.AddWithValue("@idEstudiante", idEstudiante);
+                comando.Parameters.AddWithValue("@nombre", nombre);
+                comando.Parameters.AddWithValue("@cedula", cedula);
+                comando.Parameters.AddWithValue("@telefono", telefono);
+                comando.Parameters.AddWithValue("@fechaIngreso", fechaIngreso);
+                comando.Parameters.AddWithValue("@estado", estado);
+
+                comando.ExecuteNonQuery();
+
+                Console.WriteLine("Estudiante editado correctamente.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al editar estudiante: " + ex.Message);
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
         }
 
         // Método Buscar
         public void Buscar(int id)
         {
-            Console.WriteLine("Buscando estudiante con ID: " + id);
+            ConexionDB conexion = new ConexionDB();
+
+            try
+            {
+                conexion.AbrirConexion();
+
+                string consulta = "SELECT idEstudiante, nombre, cedula, telefono, fechaIngreso, estado " +
+                                  "FROM Estudiante " +
+                                  "WHERE idEstudiante = @idEstudiante";
+
+                MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+                comando.Parameters.AddWithValue("@idEstudiante", id);
+
+                MySqlDataReader lector = comando.ExecuteReader();
+
+                if (lector.Read())
+                {
+                    idEstudiante = Convert.ToInt32(lector["idEstudiante"]);
+                    nombre = lector["nombre"].ToString();
+                    cedula = lector["cedula"].ToString();
+                    telefono = lector["telefono"].ToString();
+                    fechaIngreso = Convert.ToDateTime(lector["fechaIngreso"]);
+                    estado = lector["estado"].ToString();
+
+                    Console.WriteLine("Estudiante encontrado.");
+                }
+                else
+                {
+                    Console.WriteLine("No se encontró el estudiante.");
+                }
+
+                lector.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al buscar estudiante: " + ex.Message);
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
         }
 
         // Método CalcularEstado
@@ -136,9 +208,7 @@ namespace DojoPayControl.Clases
         // Método Reactivar
         public void Reactivar()
         {
-            estado = "Activo";
+            estado = "Pendiente";
         }
     }
 }
-    
-
