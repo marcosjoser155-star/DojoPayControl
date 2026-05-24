@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace DojoPayControl.Interfaces
 {
-    public partial class Form2 : Form
+    public partial class FrmDashboard : Form
     {
-        public Form2()
+        public FrmDashboard()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
