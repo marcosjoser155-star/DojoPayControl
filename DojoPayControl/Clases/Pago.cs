@@ -107,52 +107,6 @@ namespace DojoPayControl.Clases
             }
         }
 
-        // Método BuscarPago
-        public void BuscarPago(int id)
-        {
-            ConexionDB conexion = new ConexionDB();
-
-            try
-            {
-                conexion.AbrirConexion();
-
-                string consulta = "SELECT idPago, idEstudiante, monto, fechaPago, metodoPago, tipoPago " +
-                                  "FROM Pago " +
-                                  "WHERE idPago = @idPago";
-
-                MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
-
-                comando.Parameters.AddWithValue("@idPago", id);
-
-                MySqlDataReader lector = comando.ExecuteReader();
-
-                if (lector.Read())
-                {
-                    idPago = Convert.ToInt32(lector["idPago"]);
-                    idEstudiante = Convert.ToInt32(lector["idEstudiante"]);
-                    monto = Convert.ToDecimal(lector["monto"]);
-                    fechaPago = Convert.ToDateTime(lector["fechaPago"]);
-                    metodoPago = lector["metodoPago"].ToString();
-                    tipoPago = lector["tipoPago"].ToString();
-
-                    Console.WriteLine("Pago encontrado.");
-                }
-                else
-                {
-                    Console.WriteLine("No se encontró el pago.");
-                }
-
-                lector.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error al buscar pago: " + ex.Message);
-            }
-            finally
-            {
-                conexion.CerrarConexion();
-            }
-        }
 
         // Método MostrarHistorial
         public void MostrarHistorial(int estudianteId)
