@@ -1,5 +1,8 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -67,13 +70,67 @@ namespace DojoPayControl.Clases
         // Método RegistrarAusencia
         public void RegistrarAusencia()
         {
-            Console.WriteLine("Ausencia temporal registrada.");
+            ConexionDB conexion = new ConexionDB();
+
+            try
+            {
+                conexion.AbrirConexion();
+
+                string consulta = "INSERT INTO AusenciaTemporal " +
+                                  "(idEstudiante, fechaInicio, fechaFin, motivo) " +
+                                  "VALUES (@idEstudiante, @fechaInicio, @fechaFin, @motivo)";
+
+                MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+
+                comando.Parameters.AddWithValue("@idEstudiante", idEstudiante);
+                comando.Parameters.AddWithValue("@fechaInicio", fechaInicio);
+                comando.Parameters.AddWithValue("@fechaFin", fechaFin);
+                comando.Parameters.AddWithValue("@motivo", motivo);
+
+                comando.ExecuteNonQuery();
+
+                Console.WriteLine("Ausencia temporal registrada correctamente.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al registrar ausencia: " + ex.Message);
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
         }
 
         // Método FinalizarAusencia
         public void FinalizarAusencia()
         {
-            Console.WriteLine("Ausencia temporal finalizada.");
+            ConexionDB conexion = new ConexionDB();
+
+            try
+            {
+                conexion.AbrirConexion();
+
+                string consulta = "UPDATE AusenciaTemporal SET " +
+                                  "fechaFin = @fechaFin " +
+                                  "WHERE idAusencia = @idAusencia";
+
+                MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+
+                comando.Parameters.AddWithValue("@fechaFin", fechaFin);
+                comando.Parameters.AddWithValue("@idAusencia", idAusencia);
+
+                comando.ExecuteNonQuery();
+
+                Console.WriteLine("Ausencia temporal finalizada correctamente.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al finalizar ausencia: " + ex.Message);
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
         }
     }
 }
