@@ -98,6 +98,7 @@
     <Compile Include="Clases\AusenciaTemporal.cs" />
     <Compile Include="Clases\ConexionDB.cs" />
     <Compile Include="Clases\Estudiante.cs" />
+    <Compile Include="Clases\Pago.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
