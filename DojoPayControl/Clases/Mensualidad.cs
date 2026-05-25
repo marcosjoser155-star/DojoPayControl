@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DojoPayControl.Clases
 {
-    internal class Mensualidad : Pago
+    public class Mensualidad : Pago
     {
         // Atributo
         private string mesCorrespondiente;
