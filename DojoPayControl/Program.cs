@@ -17,7 +17,8 @@ namespace DojoPayControl
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmDashboard());
+            Application.Run(new FrmLogin());
         }
     }
 }
+

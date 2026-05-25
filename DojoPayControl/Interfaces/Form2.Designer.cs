@@ -35,6 +35,9 @@
             this.tbcNavegacionPrincipal = new System.Windows.Forms.TabControl();
             this.tabDashboard = new System.Windows.Forms.TabPage();
             this.pnlAcciones = new System.Windows.Forms.Panel();
+            this.btnReactivarEstudiante = new System.Windows.Forms.Button();
+            this.btnAusenciaTemporal = new System.Windows.Forms.Button();
+            this.btnRegistrarPago = new System.Windows.Forms.Button();
             this.btnNuevoEstudiante = new System.Windows.Forms.Button();
             this.pnlEstados = new System.Windows.Forms.Panel();
             this.lblCountRevision = new System.Windows.Forms.Label();
@@ -56,10 +59,6 @@
             this.dtpFechaFiltro = new System.Windows.Forms.DateTimePicker();
             this.tabEstudiantes = new System.Windows.Forms.TabPage();
             this.tabPagos = new System.Windows.Forms.TabPage();
-            this.btnRegistrarPago = new System.Windows.Forms.Button();
-            this.btnPausarEstudiante = new System.Windows.Forms.Button();
-            this.btnReactivarEstudiante = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picEstrella)).BeginInit();
             this.tbcNavegacionPrincipal.SuspendLayout();
@@ -69,7 +68,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlHerramientas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLupa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -138,9 +136,8 @@
             // pnlAcciones
             // 
             this.pnlAcciones.BackColor = System.Drawing.Color.White;
-            this.pnlAcciones.Controls.Add(this.pictureBox3);
             this.pnlAcciones.Controls.Add(this.btnReactivarEstudiante);
-            this.pnlAcciones.Controls.Add(this.btnPausarEstudiante);
+            this.pnlAcciones.Controls.Add(this.btnAusenciaTemporal);
             this.pnlAcciones.Controls.Add(this.btnRegistrarPago);
             this.pnlAcciones.Controls.Add(this.btnNuevoEstudiante);
             this.pnlAcciones.Dock = System.Windows.Forms.DockStyle.Top;
@@ -148,6 +145,42 @@
             this.pnlAcciones.Name = "pnlAcciones";
             this.pnlAcciones.Size = new System.Drawing.Size(820, 46);
             this.pnlAcciones.TabIndex = 2;
+            // 
+            // btnReactivarEstudiante
+            // 
+            this.btnReactivarEstudiante.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnReactivarEstudiante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReactivarEstudiante.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReactivarEstudiante.Location = new System.Drawing.Point(479, 6);
+            this.btnReactivarEstudiante.Name = "btnReactivarEstudiante";
+            this.btnReactivarEstudiante.Size = new System.Drawing.Size(127, 32);
+            this.btnReactivarEstudiante.TabIndex = 3;
+            this.btnReactivarEstudiante.Text = "Reactivar";
+            this.btnReactivarEstudiante.UseVisualStyleBackColor = true;
+            // 
+            // btnAusenciaTemporal
+            // 
+            this.btnAusenciaTemporal.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnAusenciaTemporal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAusenciaTemporal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAusenciaTemporal.Location = new System.Drawing.Point(346, 6);
+            this.btnAusenciaTemporal.Name = "btnAusenciaTemporal";
+            this.btnAusenciaTemporal.Size = new System.Drawing.Size(127, 32);
+            this.btnAusenciaTemporal.TabIndex = 2;
+            this.btnAusenciaTemporal.Text = "Ausencia Temporal";
+            this.btnAusenciaTemporal.UseVisualStyleBackColor = true;
+            // 
+            // btnRegistrarPago
+            // 
+            this.btnRegistrarPago.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnRegistrarPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrarPago.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarPago.Location = new System.Drawing.Point(185, 6);
+            this.btnRegistrarPago.Name = "btnRegistrarPago";
+            this.btnRegistrarPago.Size = new System.Drawing.Size(155, 32);
+            this.btnRegistrarPago.TabIndex = 1;
+            this.btnRegistrarPago.Text = "Registrar pago";
+            this.btnRegistrarPago.UseVisualStyleBackColor = true;
             // 
             // btnNuevoEstudiante
             // 
@@ -375,52 +408,6 @@
             this.tabPagos.Text = "PAGOS";
             this.tabPagos.UseVisualStyleBackColor = true;
             // 
-            // btnRegistrarPago
-            // 
-            this.btnRegistrarPago.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnRegistrarPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarPago.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarPago.Location = new System.Drawing.Point(185, 6);
-            this.btnRegistrarPago.Name = "btnRegistrarPago";
-            this.btnRegistrarPago.Size = new System.Drawing.Size(155, 32);
-            this.btnRegistrarPago.TabIndex = 1;
-            this.btnRegistrarPago.Text = "Registrar pago";
-            this.btnRegistrarPago.UseVisualStyleBackColor = true;
-            // 
-            // btnPausarEstudiante
-            // 
-            this.btnPausarEstudiante.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnPausarEstudiante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPausarEstudiante.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPausarEstudiante.Location = new System.Drawing.Point(346, 6);
-            this.btnPausarEstudiante.Name = "btnPausarEstudiante";
-            this.btnPausarEstudiante.Size = new System.Drawing.Size(104, 32);
-            this.btnPausarEstudiante.TabIndex = 2;
-            this.btnPausarEstudiante.Text = "Pausar";
-            this.btnPausarEstudiante.UseVisualStyleBackColor = true;
-            // 
-            // btnReactivarEstudiante
-            // 
-            this.btnReactivarEstudiante.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnReactivarEstudiante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReactivarEstudiante.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReactivarEstudiante.Location = new System.Drawing.Point(456, 6);
-            this.btnReactivarEstudiante.Name = "btnReactivarEstudiante";
-            this.btnReactivarEstudiante.Size = new System.Drawing.Size(104, 32);
-            this.btnReactivarEstudiante.TabIndex = 3;
-            this.btnReactivarEstudiante.Text = "Reactivar";
-            this.btnReactivarEstudiante.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(461, 15);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(17, 13);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
-            // 
             // FrmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -443,7 +430,6 @@
             this.pnlHerramientas.ResumeLayout(false);
             this.pnlHerramientas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLupa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -478,8 +464,7 @@
         private System.Windows.Forms.Panel pnlAcciones;
         private System.Windows.Forms.Button btnNuevoEstudiante;
         private System.Windows.Forms.Button btnReactivarEstudiante;
-        private System.Windows.Forms.Button btnPausarEstudiante;
+        private System.Windows.Forms.Button btnAusenciaTemporal;
         private System.Windows.Forms.Button btnRegistrarPago;
-        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
