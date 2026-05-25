@@ -95,6 +95,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\AusenciaTemporal.cs" />
     <Compile Include="Clases\ConexionDB.cs" />
     <Compile Include="Clases\Estudiante.cs" />
     <Compile Include="Form1.cs">
