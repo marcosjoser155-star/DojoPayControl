@@ -3,7 +3,7 @@ using MySql.Data.MySqlClient;
 
 namespace DojoPayControl.Clases
 {
-    internal class Estudiante
+    public class Estudiante
     {
         // Atributos
         private int idEstudiante;
