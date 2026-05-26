@@ -1,6 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -24,7 +23,7 @@ namespace DojoPayControl.Clases
             set { idUsuario = value; }
         }
 
-        public string Usuario
+        public string NombreUsuario
         {
             get { return usuario; }
             set { usuario = value; }
