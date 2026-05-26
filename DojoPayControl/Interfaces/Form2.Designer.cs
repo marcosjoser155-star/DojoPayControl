@@ -416,6 +416,7 @@
             this.ClientSize = new System.Drawing.Size(834, 611);
             this.Controls.Add(this.tbcNavegacionPrincipal);
             this.Controls.Add(this.pnlHeader);
+            this.MinimumSize = new System.Drawing.Size(725, 500);
             this.Name = "FrmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.pnlHeader.ResumeLayout(false);
