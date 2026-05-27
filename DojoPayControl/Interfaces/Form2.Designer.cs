@@ -214,7 +214,7 @@
             this.pnlEstados.Name = "pnlEstados";
             this.pnlEstados.Size = new System.Drawing.Size(820, 65);
             this.pnlEstados.TabIndex = 1;
-            this.pnlEstados.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.pnlEstados.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
             // 
             // lblCountRevision
             // 
@@ -331,7 +331,7 @@
             this.label2.Size = new System.Drawing.Size(296, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Sistema de Control de Mensualidades-Dojo Pay Control";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // pnlHerramientas
             // 
@@ -376,7 +376,7 @@
             this.label1.Size = new System.Drawing.Size(91, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Buscar estudiante:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // dtpFechaFiltro
             // 

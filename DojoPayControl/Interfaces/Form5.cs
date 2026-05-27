@@ -14,7 +14,12 @@ namespace DojoPayControl.Interfaces
     {
         public FrmAusenciaTemporal()
         {
-            InitializeComponent();
+            InitializeComponent ();
+        }
+
+        private void FrmAusenciaTemporal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

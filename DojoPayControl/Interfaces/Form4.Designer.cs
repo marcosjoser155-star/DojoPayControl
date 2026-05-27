@@ -36,44 +36,44 @@
             this.lblTituloHeader = new System.Windows.Forms.Label();
             this.picIconoHeader = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtNumRecibo = new System.Windows.Forms.TextBox();
+            this.cmbMetodoPago = new System.Windows.Forms.ComboBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.numAnio = new System.Windows.Forms.NumericUpDown();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnAnualidad = new System.Windows.Forms.Button();
+            this.btnMensualidad = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbEstudiante = new System.Windows.Forms.ComboBox();
             this.pnlDivisionPersonal = new System.Windows.Forms.Panel();
             this.lblSeccionEstudiante = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.cmbEstudiante = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnMensualidad = new System.Windows.Forms.Button();
-            this.btnAnualidad = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.numAnio = new System.Windows.Forms.NumericUpDown();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cmbMetodoPago = new System.Windows.Forms.ComboBox();
-            this.txtNumRecibo = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.pnlHeaderSub.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnLHeaderTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoHeader)).BeginInit();
             this.panel2.SuspendLayout();
-            this.pnlFooter.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numAnio)).BeginInit();
-            this.panel5.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.pnlFooter.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeaderSub
@@ -166,7 +166,295 @@
             this.panel2.Padding = new System.Windows.Forms.Padding(25);
             this.panel2.Size = new System.Drawing.Size(834, 526);
             this.panel2.TabIndex = 6;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.DimGray;
+            this.label10.Location = new System.Drawing.Point(429, 397);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(108, 15);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "Número de recibo";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.DimGray;
+            this.label9.Location = new System.Drawing.Point(21, 397);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(98, 15);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "Método de pago";
+            // 
+            // txtNumRecibo
+            // 
+            this.txtNumRecibo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNumRecibo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumRecibo.Location = new System.Drawing.Point(432, 415);
+            this.txtNumRecibo.Name = "txtNumRecibo";
+            this.txtNumRecibo.Size = new System.Drawing.Size(380, 25);
+            this.txtNumRecibo.TabIndex = 14;
+            // 
+            // cmbMetodoPago
+            // 
+            this.cmbMetodoPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMetodoPago.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMetodoPago.FormattingEnabled = true;
+            this.cmbMetodoPago.Items.AddRange(new object[] {
+            "Efectivo",
+            "Transferencia",
+            "Yappy"});
+            this.cmbMetodoPago.Location = new System.Drawing.Point(24, 415);
+            this.cmbMetodoPago.Name = "cmbMetodoPago";
+            this.cmbMetodoPago.Size = new System.Drawing.Size(380, 25);
+            this.cmbMetodoPago.TabIndex = 13;
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(255)))), ((int)(((byte)(244)))));
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.label8);
+            this.panel5.Controls.Add(this.label7);
+            this.panel5.Location = new System.Drawing.Point(26, 338);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(784, 50);
+            this.panel5.TabIndex = 12;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(133)))), ((int)(((byte)(90)))));
+            this.label8.Location = new System.Drawing.Point(716, 8);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(61, 25);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "40.00";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(133)))), ((int)(((byte)(90)))));
+            this.label7.Location = new System.Drawing.Point(12, 14);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(146, 19);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Monto a pagar (B/.) ";
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
+            this.panel4.Location = new System.Drawing.Point(27, 320);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(784, 1);
+            this.panel4.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(133)))), ((int)(((byte)(90)))));
+            this.label6.Location = new System.Drawing.Point(24, 304);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(136, 19);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "DETALLES DE PAGO";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel1.Controls.Add(this.label5, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.comboBox2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.numAnio, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 2, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(26, 232);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 53);
+            this.tableLayoutPanel1.TabIndex = 11;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.TableLayoutPanel1_Paint);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(535, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 15);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Fecha de pago";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Location = new System.Drawing.Point(269, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(29, 15);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Año";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(30, 15);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Mes";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio ",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"});
+            this.comboBox2.Location = new System.Drawing.Point(3, 18);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(258, 23);
+            this.comboBox2.TabIndex = 10;
+            // 
+            // numAnio
+            // 
+            this.numAnio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numAnio.Location = new System.Drawing.Point(269, 18);
+            this.numAnio.Maximum = new decimal(new int[] {
+            2100,
+            0,
+            0,
+            0});
+            this.numAnio.Minimum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numAnio.Name = "numAnio";
+            this.numAnio.Size = new System.Drawing.Size(259, 23);
+            this.numAnio.TabIndex = 13;
+            this.numAnio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numAnio.Value = new decimal(new int[] {
+            2026,
+            0,
+            0,
+            0});
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(535, 18);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(262, 23);
+            this.dateTimePicker1.TabIndex = 14;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel3.Controls.Add(this.btnAnualidad);
+            this.panel3.Controls.Add(this.btnMensualidad);
+            this.panel3.Location = new System.Drawing.Point(26, 146);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(794, 80);
+            this.panel3.TabIndex = 8;
+            // 
+            // btnAnualidad
+            // 
+            this.btnAnualidad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAnualidad.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.btnAnualidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnualidad.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnualidad.ForeColor = System.Drawing.Color.DimGray;
+            this.btnAnualidad.Location = new System.Drawing.Point(401, 20);
+            this.btnAnualidad.Name = "btnAnualidad";
+            this.btnAnualidad.Size = new System.Drawing.Size(380, 40);
+            this.btnAnualidad.TabIndex = 7;
+            this.btnAnualidad.Text = "Anualidad";
+            this.btnAnualidad.UseVisualStyleBackColor = true;
+            // 
+            // btnMensualidad
+            // 
+            this.btnMensualidad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnMensualidad.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.btnMensualidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMensualidad.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMensualidad.ForeColor = System.Drawing.Color.DimGray;
+            this.btnMensualidad.Location = new System.Drawing.Point(17, 20);
+            this.btnMensualidad.Name = "btnMensualidad";
+            this.btnMensualidad.Size = new System.Drawing.Size(380, 40);
+            this.btnMensualidad.TabIndex = 6;
+            this.btnMensualidad.Text = "Mensualidad";
+            this.btnMensualidad.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.Location = new System.Drawing.Point(26, 139);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(784, 1);
+            this.panel1.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(133)))), ((int)(((byte)(90)))));
+            this.label2.Location = new System.Drawing.Point(23, 123);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 19);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "TIPO DE PAGO";
+            // 
+            // cmbEstudiante
+            // 
+            this.cmbEstudiante.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbEstudiante.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstudiante.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEstudiante.FormattingEnabled = true;
+            this.cmbEstudiante.Location = new System.Drawing.Point(24, 75);
+            this.cmbEstudiante.Name = "cmbEstudiante";
+            this.cmbEstudiante.Size = new System.Drawing.Size(784, 25);
+            this.cmbEstudiante.TabIndex = 4;
             // 
             // pnlDivisionPersonal
             // 
@@ -239,294 +527,6 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             // 
-            // cmbEstudiante
-            // 
-            this.cmbEstudiante.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbEstudiante.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEstudiante.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbEstudiante.FormattingEnabled = true;
-            this.cmbEstudiante.Location = new System.Drawing.Point(24, 75);
-            this.cmbEstudiante.Name = "cmbEstudiante";
-            this.cmbEstudiante.Size = new System.Drawing.Size(784, 25);
-            this.cmbEstudiante.TabIndex = 4;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Location = new System.Drawing.Point(26, 139);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(784, 1);
-            this.panel1.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(133)))), ((int)(((byte)(90)))));
-            this.label2.Location = new System.Drawing.Point(23, 123);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 19);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "TIPO DE PAGO";
-            // 
-            // btnMensualidad
-            // 
-            this.btnMensualidad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnMensualidad.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
-            this.btnMensualidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMensualidad.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMensualidad.ForeColor = System.Drawing.Color.DimGray;
-            this.btnMensualidad.Location = new System.Drawing.Point(17, 20);
-            this.btnMensualidad.Name = "btnMensualidad";
-            this.btnMensualidad.Size = new System.Drawing.Size(380, 40);
-            this.btnMensualidad.TabIndex = 6;
-            this.btnMensualidad.Text = "Mensualidad";
-            this.btnMensualidad.UseVisualStyleBackColor = true;
-            // 
-            // btnAnualidad
-            // 
-            this.btnAnualidad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAnualidad.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
-            this.btnAnualidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnualidad.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnualidad.ForeColor = System.Drawing.Color.DimGray;
-            this.btnAnualidad.Location = new System.Drawing.Point(401, 20);
-            this.btnAnualidad.Name = "btnAnualidad";
-            this.btnAnualidad.Size = new System.Drawing.Size(380, 40);
-            this.btnAnualidad.TabIndex = 7;
-            this.btnAnualidad.Text = "Anualidad";
-            this.btnAnualidad.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel3.Controls.Add(this.btnAnualidad);
-            this.panel3.Controls.Add(this.btnMensualidad);
-            this.panel3.Location = new System.Drawing.Point(26, 146);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(794, 80);
-            this.panel3.TabIndex = 8;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 15);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Mes";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Enero",
-            "Febrero",
-            "Marzo",
-            "Abril",
-            "Mayo",
-            "Junio ",
-            "Julio",
-            "Agosto",
-            "Septiembre",
-            "Octubre",
-            "Noviembre",
-            "Diciembre"});
-            this.comboBox2.Location = new System.Drawing.Point(3, 18);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(258, 23);
-            this.comboBox2.TabIndex = 10;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel1.Controls.Add(this.label5, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.numAnio, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 2, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(26, 232);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 53);
-            this.tableLayoutPanel1.TabIndex = 11;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(269, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 15);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Año";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(535, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 15);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Fecha de pago";
-            // 
-            // numAnio
-            // 
-            this.numAnio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numAnio.Location = new System.Drawing.Point(269, 18);
-            this.numAnio.Maximum = new decimal(new int[] {
-            2100,
-            0,
-            0,
-            0});
-            this.numAnio.Minimum = new decimal(new int[] {
-            2000,
-            0,
-            0,
-            0});
-            this.numAnio.Name = "numAnio";
-            this.numAnio.Size = new System.Drawing.Size(259, 23);
-            this.numAnio.TabIndex = 13;
-            this.numAnio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numAnio.Value = new decimal(new int[] {
-            2026,
-            0,
-            0,
-            0});
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(535, 18);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(262, 23);
-            this.dateTimePicker1.TabIndex = 14;
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.LightGray;
-            this.panel4.Location = new System.Drawing.Point(27, 320);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(784, 1);
-            this.panel4.TabIndex = 5;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(133)))), ((int)(((byte)(90)))));
-            this.label6.Location = new System.Drawing.Point(24, 304);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 19);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "DETALLES DE PAGO";
-            // 
-            // panel5
-            // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(255)))), ((int)(((byte)(244)))));
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.label8);
-            this.panel5.Controls.Add(this.label7);
-            this.panel5.Location = new System.Drawing.Point(26, 338);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(784, 50);
-            this.panel5.TabIndex = 12;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(133)))), ((int)(((byte)(90)))));
-            this.label7.Location = new System.Drawing.Point(12, 14);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(146, 19);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Monto a pagar (B/.) ";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(133)))), ((int)(((byte)(90)))));
-            this.label8.Location = new System.Drawing.Point(716, 8);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 25);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "40.00";
-            // 
-            // cmbMetodoPago
-            // 
-            this.cmbMetodoPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMetodoPago.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbMetodoPago.FormattingEnabled = true;
-            this.cmbMetodoPago.Items.AddRange(new object[] {
-            "Efectivo",
-            "Transferencia",
-            "Yappy"});
-            this.cmbMetodoPago.Location = new System.Drawing.Point(24, 415);
-            this.cmbMetodoPago.Name = "cmbMetodoPago";
-            this.cmbMetodoPago.Size = new System.Drawing.Size(380, 25);
-            this.cmbMetodoPago.TabIndex = 13;
-            // 
-            // txtNumRecibo
-            // 
-            this.txtNumRecibo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNumRecibo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumRecibo.Location = new System.Drawing.Point(432, 415);
-            this.txtNumRecibo.Name = "txtNumRecibo";
-            this.txtNumRecibo.Size = new System.Drawing.Size(380, 25);
-            this.txtNumRecibo.TabIndex = 14;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.DimGray;
-            this.label9.Location = new System.Drawing.Point(21, 397);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 15);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "Método de pago";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DimGray;
-            this.label10.Location = new System.Drawing.Point(429, 397);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(108, 15);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "Número de recibo";
-            // 
             // FrmRegistrarPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -548,13 +548,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.picIconoHeader)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.pnlFooter.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numAnio)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.pnlFooter.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

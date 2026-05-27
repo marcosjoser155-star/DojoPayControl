@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace DojoPayControl.Interfaces
 {
-    public partial class FrmNuevoEstudiante : Form
+    public partial class FrmReactivarEstudiante : Form
     {
-        public FrmNuevoEstudiante()
+        public FrmReactivarEstudiante()
         {
             InitializeComponent();
         }
 
-        private void FrmNuevoEstudiante_Load(object sender, EventArgs e)
+        private void Form6_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Panel2_Paint(object sender, PaintEventArgs e)
