@@ -119,3 +119,4 @@ namespace DojoPayControl.Clases
         }
     }
 }
+//jhosue es gay//
