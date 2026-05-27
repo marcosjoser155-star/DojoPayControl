@@ -151,9 +151,9 @@
             this.btnReactivarEstudiante.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btnReactivarEstudiante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReactivarEstudiante.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReactivarEstudiante.Location = new System.Drawing.Point(479, 6);
+            this.btnReactivarEstudiante.Location = new System.Drawing.Point(522, 6);
             this.btnReactivarEstudiante.Name = "btnReactivarEstudiante";
-            this.btnReactivarEstudiante.Size = new System.Drawing.Size(127, 32);
+            this.btnReactivarEstudiante.Size = new System.Drawing.Size(140, 32);
             this.btnReactivarEstudiante.TabIndex = 3;
             this.btnReactivarEstudiante.Text = "Reactivar";
             this.btnReactivarEstudiante.UseVisualStyleBackColor = true;
@@ -163,9 +163,9 @@
             this.btnAusenciaTemporal.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btnAusenciaTemporal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAusenciaTemporal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAusenciaTemporal.Location = new System.Drawing.Point(346, 6);
+            this.btnAusenciaTemporal.Location = new System.Drawing.Point(376, 6);
             this.btnAusenciaTemporal.Name = "btnAusenciaTemporal";
-            this.btnAusenciaTemporal.Size = new System.Drawing.Size(127, 32);
+            this.btnAusenciaTemporal.Size = new System.Drawing.Size(140, 32);
             this.btnAusenciaTemporal.TabIndex = 2;
             this.btnAusenciaTemporal.Text = "Ausencia Temporal";
             this.btnAusenciaTemporal.UseVisualStyleBackColor = true;
@@ -175,9 +175,9 @@
             this.btnRegistrarPago.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btnRegistrarPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarPago.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarPago.Location = new System.Drawing.Point(185, 6);
+            this.btnRegistrarPago.Location = new System.Drawing.Point(200, 6);
             this.btnRegistrarPago.Name = "btnRegistrarPago";
-            this.btnRegistrarPago.Size = new System.Drawing.Size(155, 32);
+            this.btnRegistrarPago.Size = new System.Drawing.Size(170, 32);
             this.btnRegistrarPago.TabIndex = 1;
             this.btnRegistrarPago.Text = "Registrar pago";
             this.btnRegistrarPago.UseVisualStyleBackColor = true;
@@ -189,7 +189,7 @@
             this.btnNuevoEstudiante.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevoEstudiante.Location = new System.Drawing.Point(24, 6);
             this.btnNuevoEstudiante.Name = "btnNuevoEstudiante";
-            this.btnNuevoEstudiante.Size = new System.Drawing.Size(155, 32);
+            this.btnNuevoEstudiante.Size = new System.Drawing.Size(170, 32);
             this.btnNuevoEstudiante.TabIndex = 0;
             this.btnNuevoEstudiante.Text = "+ Nuevo estudiante";
             this.btnNuevoEstudiante.UseVisualStyleBackColor = true;

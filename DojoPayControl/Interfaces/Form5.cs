@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace DojoPayControl.Interfaces
 {
-    public partial class FrmRegistrarPago : Form
+    public partial class FrmAusenciaTemporal : Form
     {
-        public FrmRegistrarPago()
+        public FrmAusenciaTemporal()
         {
             InitializeComponent();
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
