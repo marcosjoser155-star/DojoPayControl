@@ -31,5 +31,10 @@ namespace DojoPayControl.Interfaces
         {
 
         }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
