@@ -1,10 +1,6 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using System.Data;
+using MySql.Data.MySqlClient;
 
 namespace DojoPayControl.Clases
 {
@@ -48,8 +44,7 @@ namespace DojoPayControl.Clases
         }
 
         // Constructor con parámetros
-        public Usuario(int idUsuario, string usuario,
-                       string contrasena, string rol)
+        public Usuario(int idUsuario, string usuario, string contrasena, string rol)
         {
             this.idUsuario = idUsuario;
             this.usuario = usuario;
@@ -57,58 +52,52 @@ namespace DojoPayControl.Clases
             this.rol = rol;
         }
 
-        // Método IniciarSesion
+        // Método para iniciar sesión
         public bool IniciarSesion()
         {
             ConexionDB conexion = new ConexionDB();
 
             try
             {
-                conexion.AbrirConexion();
-
-                string consulta = "SELECT * FROM Usuario " +
+                string consulta = "SELECT idUsuario, usuario, contrasena, rol " +
+                                  "FROM Usuario " +
                                   "WHERE usuario = @usuario " +
                                   "AND contrasena = @contrasena";
 
-                MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
-
-                comando.Parameters.AddWithValue("@usuario", usuario);
-                comando.Parameters.AddWithValue("@contrasena", contrasena);
-
-                MySqlDataReader lector = comando.ExecuteReader();
-
-                if (lector.Read())
+                MySqlParameter[] parametros = new MySqlParameter[]
                 {
-                    rol = lector["rol"].ToString();
+                    new MySqlParameter("@usuario", this.usuario),
+                    new MySqlParameter("@contrasena", this.contrasena)
+                };
 
-                    lector.Close();
+                DataTable tabla = conexion.EjecutarConsulta(consulta, parametros);
+
+                if (tabla.Rows.Count > 0)
+                {
+                    this.idUsuario = Convert.ToInt32(tabla.Rows[0]["idUsuario"]);
+                    this.usuario = tabla.Rows[0]["usuario"].ToString();
+                    this.contrasena = tabla.Rows[0]["contrasena"].ToString();
+                    this.rol = tabla.Rows[0]["rol"].ToString();
 
                     return true;
                 }
                 else
                 {
-                    lector.Close();
-
                     return false;
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error al iniciar sesión: " + ex.Message);
-
                 return false;
-            }
-            finally
-            {
-                conexion.CerrarConexion();
             }
         }
 
-        // Método ValidarUsuario
+        // Método para validar que los campos del login no estén vacíos
         public bool ValidarUsuario()
         {
-            if (!string.IsNullOrEmpty(usuario) &&
-                !string.IsNullOrEmpty(contrasena))
+            if (!string.IsNullOrEmpty(this.usuario) &&
+                !string.IsNullOrEmpty(this.contrasena))
             {
                 return true;
             }
@@ -119,4 +108,3 @@ namespace DojoPayControl.Clases
         }
     }
 }
-//jhosue es gay//

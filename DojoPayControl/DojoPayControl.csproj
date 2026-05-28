@@ -98,6 +98,7 @@
     <Compile Include="Clases\Anualidad.cs" />
     <Compile Include="Clases\AusenciaTemporal.cs" />
     <Compile Include="Clases\ConexionDB.cs" />
+    <Compile Include="Clases\Dashboard.cs" />
     <Compile Include="Clases\Estudiante.cs" />
     <Compile Include="Clases\Mensualidad.cs" />
     <Compile Include="Clases\Pago.cs" />
@@ -165,7 +166,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataBase\dojo_control.sql" />
-    <Content Include="DataBase\dojo_control_super_documentacion.sql" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
