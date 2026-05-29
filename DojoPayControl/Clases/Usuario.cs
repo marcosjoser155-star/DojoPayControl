@@ -72,8 +72,9 @@ namespace DojoPayControl.Clases
 
                 MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
 
-                comando.Parameters.AddWithValue("@usuario", usuario);
-                comando.Parameters.AddWithValue("@contrasena", contrasena);
+                // use trimmed parameters
+                comando.Parameters.AddWithValue("@usuario", (usuario ?? string.Empty).Trim());
+                comando.Parameters.AddWithValue("@contrasena", (contrasena ?? string.Empty).Trim());
 
                 MySqlDataReader lector = comando.ExecuteReader();
 

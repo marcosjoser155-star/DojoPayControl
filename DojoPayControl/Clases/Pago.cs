@@ -109,9 +109,10 @@ namespace DojoPayControl.Clases
 
 
         // Método MostrarHistorial
-        public void MostrarHistorial(int estudianteId)
+        public System.Data.DataTable MostrarHistorial(int estudianteId)
         {
             ConexionDB conexion = new ConexionDB();
+            System.Data.DataTable tabla = new System.Data.DataTable();
 
             try
             {
@@ -124,20 +125,8 @@ namespace DojoPayControl.Clases
 
                 comando.Parameters.AddWithValue("@idEstudiante", estudianteId);
 
-                MySqlDataReader lector = comando.ExecuteReader();
-
-                while (lector.Read())
-                {
-                    Console.WriteLine(
-                        "ID Pago: " + lector["idPago"] +
-                        " | Monto: " + lector["monto"] +
-                        " | Fecha: " + lector["fechaPago"] +
-                        " | Método: " + lector["metodoPago"] +
-                        " | Tipo: " + lector["tipoPago"]
-                    );
-                }
-
-                lector.Close();
+                MySqlDataAdapter adapter = new MySqlDataAdapter(comando);
+                adapter.Fill(tabla);
             }
             catch (Exception ex)
             {
@@ -147,6 +136,8 @@ namespace DojoPayControl.Clases
             {
                 conexion.CerrarConexion();
             }
+
+            return tabla;
         }
 
         // Método ValidarPago

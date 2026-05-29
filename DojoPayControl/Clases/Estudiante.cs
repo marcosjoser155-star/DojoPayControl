@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using MySql.Data.MySqlClient;
 
 namespace DojoPayControl.Clases
@@ -8,6 +9,7 @@ namespace DojoPayControl.Clases
         // Atributos
         private int idEstudiante;
         private string nombre;
+        private string apellido;
         private string cedula;
         private string telefono;
         private DateTime fechaIngreso;
@@ -24,6 +26,12 @@ namespace DojoPayControl.Clases
         {
             get { return nombre; }
             set { nombre = value; }
+        }
+
+        public string Apellido
+        {
+            get { return apellido; }
+            set { apellido = value; }
         }
 
         public string Cedula
@@ -57,11 +65,12 @@ namespace DojoPayControl.Clases
         }
 
         // Constructor con parámetros
-        public Estudiante(int idEstudiante, string nombre, string cedula,
+        public Estudiante(int idEstudiante, string nombre, string apellido, string cedula,
                            string telefono, DateTime fechaIngreso, string estado)
         {
             this.idEstudiante = idEstudiante;
             this.nombre = nombre;
+            this.apellido = apellido;
             this.cedula = cedula;
             this.telefono = telefono;
             this.fechaIngreso = fechaIngreso;
@@ -69,7 +78,7 @@ namespace DojoPayControl.Clases
         }
 
         // Método Registrar
-        public void Registrar()
+        public bool Registrar()
         {
             ConexionDB conexion = new ConexionDB();
 
@@ -96,15 +105,45 @@ namespace DojoPayControl.Clases
                 comando.ExecuteNonQuery();
 
                 Console.WriteLine("Estudiante registrado correctamente.");
+                return true;
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error al registrar estudiante: " + ex.Message);
+                return false;
             }
             finally
             {
                 conexion.CerrarConexion();
             }
+        }
+
+        // Método ObtenerTodos
+        public DataTable ObtenerTodos()
+        {
+            ConexionDB conexion = new ConexionDB();
+            DataTable tabla = new DataTable();
+
+            try
+            {
+                conexion.AbrirConexion();
+
+                string consulta = "SELECT idEstudiante, nombre, apellido, cedula, telefono, fechaIngreso, estado FROM Estudiante";
+
+                MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+                MySqlDataAdapter adapter = new MySqlDataAdapter(comando);
+                adapter.Fill(tabla);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener estudiantes: " + ex.Message);
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
+
+            return tabla;
         }
 
         // Método Editar
