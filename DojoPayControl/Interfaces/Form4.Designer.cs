@@ -498,6 +498,7 @@
             this.pnlFooter.Name = "pnlFooter";
             this.pnlFooter.Size = new System.Drawing.Size(834, 80);
             this.pnlFooter.TabIndex = 0;
+            this.pnlFooter.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlFooter_Paint);
             // 
             // btnGuardar
             // 
@@ -512,6 +513,7 @@
             this.btnGuardar.TabIndex = 2;
             this.btnGuardar.Text = "Registrar Pago";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
