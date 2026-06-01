@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace DojoPayControl.Interfaces
 {
-    public partial class FrmNuevoEstudiante : Form
+    public partial class FrmAusenciaTemporal : Form
     {
-        public FrmNuevoEstudiante()
+        public FrmAusenciaTemporal()
         {
-            InitializeComponent();
+            InitializeComponent ();
         }
 
-        private void FrmNuevoEstudiante_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Panel2_Paint(object sender, PaintEventArgs e)
+        private void FrmAusenciaTemporal_Load(object sender, EventArgs e)
         {
 
         }

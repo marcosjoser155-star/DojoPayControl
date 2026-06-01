@@ -17,7 +17,12 @@ namespace DojoPayControl.Interfaces
             InitializeComponent();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
