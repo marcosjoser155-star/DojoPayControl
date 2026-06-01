@@ -1,6 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
-using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace DojoPayControl.Clases
 {
@@ -88,7 +89,7 @@ namespace DojoPayControl.Clases
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al iniciar sesión: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
                 return false;
             }
         }

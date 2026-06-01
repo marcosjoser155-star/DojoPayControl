@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DojoPayControl.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,29 +13,46 @@ namespace DojoPayControl.Interfaces
 {
     public partial class FrmDashboard : Form
     {
+        Dashboard dashboard = new Dashboard();
+
         public FrmDashboard()
         {
             InitializeComponent();
+
+            this.Load += FrmDashboard_Load;
+            btnNuevoEstudiante.Click += BtnNuevoEstudiante_Click;
+            btnRegistrarPago.Click += BtnRegistrarPago_Click;
         }
 
-        private void Label1_Click(object sender, EventArgs e)
+        private void FrmDashboard_Load(object sender, EventArgs e)
         {
-
+            CargarDashboard();
         }
 
-        private void Label2_Click(object sender, EventArgs e)
+        public void CargarDashboard()
         {
+            DataTable tabla = dashboard.ListarDashboard(DateTime.Now.Month, DateTime.Now.Year);
 
+            // The designer defines dataGridView1 on the dashboard tab - bind to that control
+            dataGridView1.DataSource = tabla;
+
+            dashboard.CargarContadores();
         }
 
-        private void Panel2_Paint(object sender, PaintEventArgs e)
+        private void BtnNuevoEstudiante_Click(object sender, EventArgs e)
         {
+            FrmNuevoEstudiante frm = new FrmNuevoEstudiante();
 
+            frm.ShowDialog();
         }
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void BtnRegistrarPago_Click(object sender, EventArgs e)
         {
+            FrmRegistrarPago frm = new FrmRegistrarPago();
 
+            frm.ShowDialog();
         }
+
+       
     }
 }

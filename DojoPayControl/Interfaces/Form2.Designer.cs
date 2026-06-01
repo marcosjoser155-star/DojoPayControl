@@ -264,7 +264,7 @@
             this.pnlEstados.Name = "pnlEstados";
             this.pnlEstados.Size = new System.Drawing.Size(887, 65);
             this.pnlEstados.TabIndex = 1;
-            this.pnlEstados.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
+            // panel paint event intentionally left unhandled to keep designer clean
             // 
             // lblCountRevision
             // 
@@ -381,7 +381,7 @@
             this.label2.Size = new System.Drawing.Size(296, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Sistema de Control de Mensualidades-Dojo Pay Control";
-            this.label2.Click += new System.EventHandler(this.Label2_Click);
+            // label2 click handler removed
             // 
             // pnlHerramientas
             // 
@@ -426,7 +426,7 @@
             this.label1.Size = new System.Drawing.Size(91, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Buscar estudiante:";
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
+            // label1 click handler removed
             // 
             // dtpFechaFiltro
             // 
@@ -743,7 +743,7 @@
             this.dgvPagos.RowHeadersVisible = false;
             this.dgvPagos.Size = new System.Drawing.Size(877, 329);
             this.dgvPagos.TabIndex = 8;
-            this.dgvPagos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // dgvPagos cell content click handler removed (no handler in code-behind)
             // 
             // colAcciones
             // 
