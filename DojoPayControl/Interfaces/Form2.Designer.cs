@@ -743,7 +743,7 @@
             this.dgvPagos.RowHeadersVisible = false;
             this.dgvPagos.Size = new System.Drawing.Size(877, 329);
             this.dgvPagos.TabIndex = 8;
-            this.dgvPagos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dgvPagos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView2_CellContentClick);
             // 
             // colAcciones
             // 
