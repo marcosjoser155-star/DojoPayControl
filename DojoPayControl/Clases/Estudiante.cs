@@ -9,11 +9,14 @@ namespace DojoPayControl.Clases
         // Atributos
         private int idEstudiante;
         private string nombre;
+        private string apellido;
         private string cedula;
         private string telefono;
         private DateTime fechaIngreso;
         private string estado;
         private int activo;
+        private decimal montoMensualidad;
+        private decimal montoAnualidad;
 
         // Propiedades
         public int IdEstudiante
@@ -26,6 +29,12 @@ namespace DojoPayControl.Clases
         {
             get { return nombre; }
             set { nombre = value; }
+        }
+
+        public string Apellido
+        {
+            get { return apellido; }
+            set { apellido = value; }
         }
 
         public string Cedula
@@ -58,28 +67,52 @@ namespace DojoPayControl.Clases
             set { activo = value; }
         }
 
+        public decimal MontoMensualidad
+        {
+            get { return montoMensualidad; }
+            set { montoMensualidad = value; }
+        }
+
+        public decimal MontoAnualidad
+        {
+            get { return montoAnualidad; }
+            set { montoAnualidad = value; }
+        }
+
         // Constructor vacío
         public Estudiante()
         {
+            this.idEstudiante = 0;
+            this.nombre = "";
+            this.apellido = "";
+            this.cedula = "";
+            this.telefono = "";
+            this.fechaIngreso = DateTime.Now;
             this.estado = "Pendiente";
             this.activo = 1;
+            this.montoMensualidad = 0;
+            this.montoAnualidad = 0;
         }
 
         // Constructor con parámetros
-        public Estudiante(int idEstudiante, string nombre, string cedula,
-                          string telefono, DateTime fechaIngreso,
-                          string estado, int activo)
+        public Estudiante(int idEstudiante, string nombre, string apellido,
+                          string cedula, string telefono, DateTime fechaIngreso,
+                          string estado, int activo, decimal montoMensualidad,
+                          decimal montoAnualidad)
         {
             this.idEstudiante = idEstudiante;
             this.nombre = nombre;
+            this.apellido = apellido;
             this.cedula = cedula;
             this.telefono = telefono;
             this.fechaIngreso = fechaIngreso;
             this.estado = estado;
             this.activo = activo;
+            this.montoMensualidad = montoMensualidad;
+            this.montoAnualidad = montoAnualidad;
         }
 
-        // Método para registrar un estudiante nuevo
+        // Método para registrar un nuevo estudiante en la base de datos
         public int Registrar()
         {
             ConexionDB conexion = new ConexionDB();
@@ -87,17 +120,21 @@ namespace DojoPayControl.Clases
             try
             {
                 string consulta = "INSERT INTO Estudiante " +
-                                  "(nombre, cedula, telefono, fechaIngreso, estado, activo) " +
-                                  "VALUES (@nombre, @cedula, @telefono, @fechaIngreso, @estado, @activo)";
+                                  "(nombre, apellido, cedula, telefono, fechaIngreso, estado, activo, montoMensualidad, montoAnualidad) " +
+                                  "VALUES " +
+                                  "(@nombre, @apellido, @cedula, @telefono, @fechaIngreso, @estado, @activo, @montoMensualidad, @montoAnualidad)";
 
                 MySqlParameter[] parametros = new MySqlParameter[]
                 {
                     new MySqlParameter("@nombre", this.nombre),
+                    new MySqlParameter("@apellido", this.apellido),
                     new MySqlParameter("@cedula", this.cedula),
                     new MySqlParameter("@telefono", this.telefono),
                     new MySqlParameter("@fechaIngreso", this.fechaIngreso),
                     new MySqlParameter("@estado", this.estado),
-                    new MySqlParameter("@activo", this.activo)
+                    new MySqlParameter("@activo", this.activo),
+                    new MySqlParameter("@montoMensualidad", this.montoMensualidad),
+                    new MySqlParameter("@montoAnualidad", this.montoAnualidad)
                 };
 
                 this.idEstudiante = conexion.EjecutarComandoRetornaId(consulta, parametros);
@@ -111,7 +148,7 @@ namespace DojoPayControl.Clases
             }
         }
 
-        // Método para editar los datos de un estudiante
+        // Método para editar los datos de un estudiante existente
         public bool Editar()
         {
             ConexionDB conexion = new ConexionDB();
@@ -120,22 +157,28 @@ namespace DojoPayControl.Clases
             {
                 string consulta = "UPDATE Estudiante SET " +
                                   "nombre = @nombre, " +
+                                  "apellido = @apellido, " +
                                   "cedula = @cedula, " +
                                   "telefono = @telefono, " +
                                   "fechaIngreso = @fechaIngreso, " +
                                   "estado = @estado, " +
-                                  "activo = @activo " +
+                                  "activo = @activo, " +
+                                  "montoMensualidad = @montoMensualidad, " +
+                                  "montoAnualidad = @montoAnualidad " +
                                   "WHERE idEstudiante = @idEstudiante";
 
                 MySqlParameter[] parametros = new MySqlParameter[]
                 {
                     new MySqlParameter("@idEstudiante", this.idEstudiante),
                     new MySqlParameter("@nombre", this.nombre),
+                    new MySqlParameter("@apellido", this.apellido),
                     new MySqlParameter("@cedula", this.cedula),
                     new MySqlParameter("@telefono", this.telefono),
                     new MySqlParameter("@fechaIngreso", this.fechaIngreso),
                     new MySqlParameter("@estado", this.estado),
-                    new MySqlParameter("@activo", this.activo)
+                    new MySqlParameter("@activo", this.activo),
+                    new MySqlParameter("@montoMensualidad", this.montoMensualidad),
+                    new MySqlParameter("@montoAnualidad", this.montoAnualidad)
                 };
 
                 conexion.EjecutarComando(consulta, parametros);
@@ -156,7 +199,8 @@ namespace DojoPayControl.Clases
 
             try
             {
-                string consulta = "SELECT idEstudiante, nombre, cedula, telefono, fechaIngreso, estado, activo " +
+                string consulta = "SELECT idEstudiante, nombre, apellido, cedula, telefono, " +
+                                  "fechaIngreso, estado, activo, montoMensualidad, montoAnualidad " +
                                   "FROM Estudiante " +
                                   "WHERE idEstudiante = @idEstudiante";
 
@@ -171,11 +215,14 @@ namespace DojoPayControl.Clases
                 {
                     this.idEstudiante = Convert.ToInt32(tabla.Rows[0]["idEstudiante"]);
                     this.nombre = tabla.Rows[0]["nombre"].ToString();
+                    this.apellido = tabla.Rows[0]["apellido"].ToString();
                     this.cedula = tabla.Rows[0]["cedula"].ToString();
                     this.telefono = tabla.Rows[0]["telefono"].ToString();
                     this.fechaIngreso = Convert.ToDateTime(tabla.Rows[0]["fechaIngreso"]);
                     this.estado = tabla.Rows[0]["estado"].ToString();
                     this.activo = Convert.ToInt32(tabla.Rows[0]["activo"]);
+                    this.montoMensualidad = Convert.ToDecimal(tabla.Rows[0]["montoMensualidad"]);
+                    this.montoAnualidad = Convert.ToDecimal(tabla.Rows[0]["montoAnualidad"]);
 
                     return true;
                 }
@@ -191,29 +238,31 @@ namespace DojoPayControl.Clases
             }
         }
 
-        // Método para listar estudiantes activos en el Form Estudiantes
+        // Método para listar todos los estudiantes activos
         public DataTable ListarEstudiantes()
         {
             ConexionDB conexion = new ConexionDB();
 
-            string consulta = "SELECT idEstudiante, nombre, cedula, telefono, fechaIngreso, estado " +
+            string consulta = "SELECT idEstudiante, nombre, apellido, cedula, telefono, " +
+                              "fechaIngreso, estado, montoMensualidad, montoAnualidad " +
                               "FROM Estudiante " +
                               "WHERE activo = 1 " +
-                              "ORDER BY nombre";
+                              "ORDER BY nombre, apellido";
 
             return conexion.EjecutarConsulta(consulta);
         }
 
-        // Método para buscar estudiantes por nombre o cédula
+        // Método para buscar estudiantes por nombre, apellido o cédula
         public DataTable BuscarEstudiantes(string texto)
         {
             ConexionDB conexion = new ConexionDB();
 
-            string consulta = "SELECT idEstudiante, nombre, cedula, telefono, fechaIngreso, estado " +
+            string consulta = "SELECT idEstudiante, nombre, apellido, cedula, telefono, " +
+                              "fechaIngreso, estado, montoMensualidad, montoAnualidad " +
                               "FROM Estudiante " +
                               "WHERE activo = 1 " +
-                              "AND (nombre LIKE @texto OR cedula LIKE @texto) " +
-                              "ORDER BY nombre";
+                              "AND (nombre LIKE @texto OR apellido LIKE @texto OR cedula LIKE @texto) " +
+                              "ORDER BY nombre, apellido";
 
             MySqlParameter[] parametros = new MySqlParameter[]
             {
@@ -233,11 +282,12 @@ namespace DojoPayControl.Clases
                 return ListarEstudiantes();
             }
 
-            string consulta = "SELECT idEstudiante, nombre, cedula, telefono, fechaIngreso, estado " +
+            string consulta = "SELECT idEstudiante, nombre, apellido, cedula, telefono, " +
+                              "fechaIngreso, estado, montoMensualidad, montoAnualidad " +
                               "FROM Estudiante " +
                               "WHERE activo = 1 " +
                               "AND estado = @estado " +
-                              "ORDER BY nombre";
+                              "ORDER BY nombre, apellido";
 
             MySqlParameter[] parametros = new MySqlParameter[]
             {
@@ -275,14 +325,14 @@ namespace DojoPayControl.Clases
             }
         }
 
-        // Método para marcar al estudiante como pausado por ausencia temporal
+        // Método para marcar al estudiante en ausencia temporal
         public bool MarcarAusenciaTemporal()
         {
             ConexionDB conexion = new ConexionDB();
 
             try
             {
-                string consulta = "UPDATE Estudiante SET estado = 'Pausado' " +
+                string consulta = "UPDATE Estudiante SET estado = 'Ausencia Temporal' " +
                                   "WHERE idEstudiante = @idEstudiante";
 
                 MySqlParameter[] parametros = new MySqlParameter[]
@@ -292,7 +342,7 @@ namespace DojoPayControl.Clases
 
                 conexion.EjecutarComando(consulta, parametros);
 
-                this.estado = "Pausado";
+                this.estado = "Ausencia Temporal";
 
                 return true;
             }
@@ -331,12 +381,45 @@ namespace DojoPayControl.Clases
             }
         }
 
-        // Método para validar los datos antes de registrar
+        // Método para cambiar manualmente el estado del estudiante
+        public bool CambiarEstado(string nuevoEstado)
+        {
+            ConexionDB conexion = new ConexionDB();
+
+            try
+            {
+                string consulta = "UPDATE Estudiante SET estado = @estado " +
+                                  "WHERE idEstudiante = @idEstudiante";
+
+                MySqlParameter[] parametros = new MySqlParameter[]
+                {
+                    new MySqlParameter("@estado", nuevoEstado),
+                    new MySqlParameter("@idEstudiante", this.idEstudiante)
+                };
+
+                conexion.EjecutarComando(consulta, parametros);
+
+                this.estado = nuevoEstado;
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al cambiar estado del estudiante: " + ex.Message);
+                return false;
+            }
+        }
+
+        // Método para validar los datos antes de registrar o editar
         public bool ValidarEstudiante()
         {
             if (!string.IsNullOrEmpty(this.nombre) &&
+                !string.IsNullOrEmpty(this.apellido) &&
                 !string.IsNullOrEmpty(this.cedula) &&
-                !string.IsNullOrEmpty(this.telefono))
+                !string.IsNullOrEmpty(this.telefono) &&
+                !string.IsNullOrEmpty(this.estado) &&
+                this.montoMensualidad >= 0 &&
+                this.montoAnualidad >= 0)
             {
                 return true;
             }

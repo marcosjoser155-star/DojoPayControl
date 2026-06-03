@@ -244,7 +244,15 @@
             this.cmbEstado.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEstado.FormattingEnabled = true;
             this.cmbEstado.Items.AddRange(new object[] {
-            "Al día"});
+            "Al día",
+            "",
+            "Pendiente",
+            "",
+            "Restringido",
+            "",
+            "Ausencia Temporal",
+            "",
+            "Revisar anualidad"});
             this.cmbEstado.Location = new System.Drawing.Point(493, 237);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(320, 29);

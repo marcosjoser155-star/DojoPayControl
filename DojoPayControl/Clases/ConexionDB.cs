@@ -19,7 +19,7 @@ namespace DojoPayControl.Clases
         // Constructor
         public ConexionDB()
         {
-            this.cadenaConexion = "server=localhost;database=dojo_control;user=root;password=ArthurSar27*;";
+            this.cadenaConexion = "server=localhost;database=Dojo_Control;user=root;password=ArthurSar27*;";
         }
 
         // Método para obtener una nueva conexión a la base de datos

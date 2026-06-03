@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReactivarEstudiante));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAusenciaTemporal));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTituloFormulario = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblSubtituloFormulario = new System.Windows.Forms.Label();
             this.pnlBannerInformativo = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lblMensajeInformativo = new System.Windows.Forms.Label();
             this.cmbEstudiante = new System.Windows.Forms.ComboBox();
             this.lblCampoEstudiante = new System.Windows.Forms.Label();
             this.lblFechaInicio = new System.Windows.Forms.Label();
@@ -44,20 +48,16 @@
             this.cmbMotivoAusencia = new System.Windows.Forms.ComboBox();
             this.lblCampoObservacion = new System.Windows.Forms.Label();
             this.txtObservacionAusencia = new System.Windows.Forms.TextBox();
-            this.lblMensajeInformativo = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnRegistrarAusencia = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.pnlBannerInformativo.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pnlBannerInformativo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -70,6 +70,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(909, 45);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(14, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 19);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // lblTituloFormulario
             // 
@@ -92,6 +102,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(909, 40);
             this.panel2.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(32, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 19);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // lblSubtituloFormulario
             // 
@@ -116,6 +136,29 @@
             this.pnlBannerInformativo.Name = "pnlBannerInformativo";
             this.pnlBannerInformativo.Size = new System.Drawing.Size(850, 51);
             this.pnlBannerInformativo.TabIndex = 2;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(6, 14);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(24, 19);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
+            // lblMensajeInformativo
+            // 
+            this.lblMensajeInformativo.AutoSize = true;
+            this.lblMensajeInformativo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensajeInformativo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(67)))), ((int)(((byte)(101)))));
+            this.lblMensajeInformativo.Location = new System.Drawing.Point(28, 6);
+            this.lblMensajeInformativo.Name = "lblMensajeInformativo";
+            this.lblMensajeInformativo.Padding = new System.Windows.Forms.Padding(5, 10, 10, 10);
+            this.lblMensajeInformativo.Size = new System.Drawing.Size(597, 37);
+            this.lblMensajeInformativo.TabIndex = 0;
+            this.lblMensajeInformativo.Text = "Mientras el estudiante esté en ausencia temporal, no generará deuda ni pasará a e" +
+    "sta Restringido";
             // 
             // cmbEstudiante
             // 
@@ -231,19 +274,6 @@
             this.txtObservacionAusencia.Size = new System.Drawing.Size(350, 23);
             this.txtObservacionAusencia.TabIndex = 15;
             // 
-            // lblMensajeInformativo
-            // 
-            this.lblMensajeInformativo.AutoSize = true;
-            this.lblMensajeInformativo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensajeInformativo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(67)))), ((int)(((byte)(101)))));
-            this.lblMensajeInformativo.Location = new System.Drawing.Point(28, 6);
-            this.lblMensajeInformativo.Name = "lblMensajeInformativo";
-            this.lblMensajeInformativo.Padding = new System.Windows.Forms.Padding(5, 10, 10, 10);
-            this.lblMensajeInformativo.Size = new System.Drawing.Size(597, 37);
-            this.lblMensajeInformativo.TabIndex = 0;
-            this.lblMensajeInformativo.Text = "Mientras el estudiante esté en ausencia temporal, no generará deuda ni pasará a e" +
-    "sta Restringido";
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(247)))));
@@ -283,36 +313,6 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(14, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 19);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(32, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 19);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(6, 14);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 19);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            // 
             // FrmAusenciaTemporal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,14 +338,14 @@
             this.Load += new System.EventHandler(this.FrmAusenciaTemporal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlBannerInformativo.ResumeLayout(false);
             this.pnlBannerInformativo.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
