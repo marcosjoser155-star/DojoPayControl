@@ -531,12 +531,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(834, 611);
             this.Controls.Add(this.pnlFooter);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlHeaderSub);
             this.Controls.Add(this.pnLHeaderTop);
-            this.MinimumSize = new System.Drawing.Size(800, 600);
+            this.MinimumSize = new System.Drawing.Size(850, 650);
             this.Name = "FrmRegistrarPago";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form4";

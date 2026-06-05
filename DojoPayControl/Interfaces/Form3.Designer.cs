@@ -200,7 +200,7 @@
             this.pnlInformacionPersonal.Location = new System.Drawing.Point(0, 70);
             this.pnlInformacionPersonal.Name = "pnlInformacionPersonal";
             this.pnlInformacionPersonal.Padding = new System.Windows.Forms.Padding(30);
-            this.pnlInformacionPersonal.Size = new System.Drawing.Size(844, 467);
+            this.pnlInformacionPersonal.Size = new System.Drawing.Size(844, 491);
             this.pnlInformacionPersonal.TabIndex = 4;
             this.pnlInformacionPersonal.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
             // 
@@ -440,7 +440,7 @@
             this.pnlFooter.Controls.Add(this.btnGuardar);
             this.pnlFooter.Controls.Add(this.btnCancelar);
             this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlFooter.Location = new System.Drawing.Point(0, 467);
+            this.pnlFooter.Location = new System.Drawing.Point(0, 491);
             this.pnlFooter.Name = "pnlFooter";
             this.pnlFooter.Size = new System.Drawing.Size(844, 70);
             this.pnlFooter.TabIndex = 21;
@@ -477,14 +477,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(844, 537);
+            this.ClientSize = new System.Drawing.Size(844, 561);
             this.Controls.Add(this.pnlFooter);
             this.Controls.Add(this.pnlInformacionPersonal);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnLHeader);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "FrmNuevoEstudiante";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.FrmNuevoEstudiante_Load);

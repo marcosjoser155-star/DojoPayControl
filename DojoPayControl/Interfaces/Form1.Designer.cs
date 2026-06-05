@@ -178,9 +178,9 @@
             this.picLogoDojo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.picLogoDojo.BackColor = System.Drawing.Color.Transparent;
             this.picLogoDojo.Image = ((System.Drawing.Image)(resources.GetObject("picLogoDojo.Image")));
-            this.picLogoDojo.Location = new System.Drawing.Point(149, 47);
+            this.picLogoDojo.Location = new System.Drawing.Point(140, 47);
             this.picLogoDojo.Name = "picLogoDojo";
-            this.picLogoDojo.Size = new System.Drawing.Size(100, 63);
+            this.picLogoDojo.Size = new System.Drawing.Size(123, 85);
             this.picLogoDojo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogoDojo.TabIndex = 2;
             this.picLogoDojo.TabStop = false;
@@ -213,7 +213,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(792, 515);
             this.Controls.Add(this.pnlLogin);
-            this.MinimumSize = new System.Drawing.Size(420, 550);
+            this.MinimumSize = new System.Drawing.Size(480, 550);
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FrmLogin_Load);
