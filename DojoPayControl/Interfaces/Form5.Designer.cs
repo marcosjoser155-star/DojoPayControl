@@ -280,7 +280,7 @@
             this.panel3.Controls.Add(this.btnRegistrarAusencia);
             this.panel3.Controls.Add(this.btnCancelar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 431);
+            this.panel3.Location = new System.Drawing.Point(0, 481);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(909, 80);
             this.panel3.TabIndex = 16;
@@ -318,7 +318,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(909, 511);
+            this.ClientSize = new System.Drawing.Size(909, 561);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.txtObservacionAusencia);
             this.Controls.Add(this.lblCampoObservacion);
@@ -333,6 +333,7 @@
             this.Controls.Add(this.pnlBannerInformativo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.MinimumSize = new System.Drawing.Size(785, 575);
             this.Name = "FrmAusenciaTemporal";
             this.Text = "Form5";
             this.Load += new System.EventHandler(this.FrmAusenciaTemporal_Load);

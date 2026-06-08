@@ -29,23 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDashboard));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlHeader = new System.Windows.Forms.FlowLayoutPanel();
             this.picEstrella = new System.Windows.Forms.PictureBox();
             this.lblTituloApp = new System.Windows.Forms.Label();
             this.tbcNavegacionPrincipal = new System.Windows.Forms.TabControl();
             this.tabDashboard = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.colEstadoIcono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEstudiante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMensualidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAnualidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlAcciones = new System.Windows.Forms.Panel();
             this.btnReactivarEstudiante = new System.Windows.Forms.Button();
             this.btnAusenciaTemporal = new System.Windows.Forms.Button();
@@ -70,29 +75,24 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dtpFechaFiltro = new System.Windows.Forms.DateTimePicker();
             this.tabEstudiantes = new System.Windows.Forms.TabPage();
-            this.tabPagos = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblBuscarEstudiante = new System.Windows.Forms.Label();
-            this.txtBuscarEstudiante = new System.Windows.Forms.TextBox();
-            this.cmbFiltroEstado = new System.Windows.Forms.ComboBox();
             this.dgvEstudiantes = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.colEstadoIcono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEstudiante = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMensualidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAnualidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFechaIngreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEstadoTexto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAcciones = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbFiltroEstado = new System.Windows.Forms.ComboBox();
+            this.txtBuscarEstudiante = new System.Windows.Forms.TextBox();
+            this.lblBuscarEstudiante = new System.Windows.Forms.Label();
+            this.tabPagos = new System.Windows.Forms.TabPage();
+            this.dgvPagos = new System.Windows.Forms.DataGridView();
+            this.cmbFiltroTipoPago = new System.Windows.Forms.ComboBox();
+            this.cmbFiltroAnio = new System.Windows.Forms.ComboBox();
             this.cmbFiltroMes = new System.Windows.Forms.ComboBox();
             this.txtBuscarEstudiantePago = new System.Windows.Forms.TextBox();
             this.lblBuscarPago = new System.Windows.Forms.Label();
-            this.cmbFiltroAnio = new System.Windows.Forms.ComboBox();
-            this.cmbFiltroTipoPago = new System.Windows.Forms.ComboBox();
-            this.dgvPagos = new System.Windows.Forms.DataGridView();
-            this.colAcciones = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.colEstadoTexto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFechaIngreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEstudiantePago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTipoPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMesPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -105,16 +105,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.picEstrella)).BeginInit();
             this.tbcNavegacionPrincipal.SuspendLayout();
             this.tabDashboard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlAcciones.SuspendLayout();
             this.pnlEstados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlHerramientas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLupa)).BeginInit();
             this.tabEstudiantes.SuspendLayout();
-            this.tabPagos.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiantes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.tabPagos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPagos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -182,6 +182,73 @@
             this.tabDashboard.TabIndex = 0;
             this.tabDashboard.Text = "DASHBOARD";
             this.tabDashboard.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(85)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colEstadoIcono,
+            this.colEstudiante,
+            this.colMensualidad,
+            this.colAnualidad});
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle20;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 154);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowTemplate.Height = 50;
+            this.dataGridView1.Size = new System.Drawing.Size(887, 386);
+            this.dataGridView1.TabIndex = 3;
+            // 
+            // colEstadoIcono
+            // 
+            this.colEstadoIcono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colEstadoIcono.DefaultCellStyle = dataGridViewCellStyle16;
+            this.colEstadoIcono.HeaderText = "Estado";
+            this.colEstadoIcono.Name = "colEstadoIcono";
+            this.colEstadoIcono.Width = 60;
+            // 
+            // colEstudiante
+            // 
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.colEstudiante.DefaultCellStyle = dataGridViewCellStyle17;
+            this.colEstudiante.HeaderText = "Estudiante";
+            this.colEstudiante.Name = "colEstudiante";
+            // 
+            // colMensualidad
+            // 
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colMensualidad.DefaultCellStyle = dataGridViewCellStyle18;
+            this.colMensualidad.HeaderText = "Mensualidad";
+            this.colMensualidad.Name = "colMensualidad";
+            // 
+            // colAnualidad
+            // 
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colAnualidad.DefaultCellStyle = dataGridViewCellStyle19;
+            this.colAnualidad.HeaderText = "Anualidad";
+            this.colAnualidad.Name = "colAnualidad";
             // 
             // pnlAcciones
             // 
@@ -450,21 +517,88 @@
             this.tabEstudiantes.Text = "ESTUDIANTES";
             this.tabEstudiantes.UseVisualStyleBackColor = true;
             // 
-            // tabPagos
+            // dgvEstudiantes
             // 
-            this.tabPagos.Controls.Add(this.dgvPagos);
-            this.tabPagos.Controls.Add(this.cmbFiltroTipoPago);
-            this.tabPagos.Controls.Add(this.cmbFiltroAnio);
-            this.tabPagos.Controls.Add(this.cmbFiltroMes);
-            this.tabPagos.Controls.Add(this.txtBuscarEstudiantePago);
-            this.tabPagos.Controls.Add(this.lblBuscarPago);
-            this.tabPagos.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPagos.Location = new System.Drawing.Point(4, 34);
-            this.tabPagos.Name = "tabPagos";
-            this.tabPagos.Size = new System.Drawing.Size(893, 543);
-            this.tabPagos.TabIndex = 2;
-            this.tabPagos.Text = "PAGOS";
-            this.tabPagos.UseVisualStyleBackColor = true;
+            this.dgvEstudiantes.AllowUserToAddRows = false;
+            this.dgvEstudiantes.AllowUserToOrderColumns = true;
+            this.dgvEstudiantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEstudiantes.BackgroundColor = System.Drawing.Color.White;
+            this.dgvEstudiantes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(85)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEstudiantes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            this.dgvEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEstudiantes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colNombre,
+            this.colCedula,
+            this.colTelefono,
+            this.colFechaIngreso,
+            this.colEstadoTexto,
+            this.colAcciones});
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle24.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEstudiantes.DefaultCellStyle = dataGridViewCellStyle24;
+            this.dgvEstudiantes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvEstudiantes.EnableHeadersVisualStyles = false;
+            this.dgvEstudiantes.Location = new System.Drawing.Point(3, 113);
+            this.dgvEstudiantes.Margin = new System.Windows.Forms.Padding(20);
+            this.dgvEstudiantes.Name = "dgvEstudiantes";
+            this.dgvEstudiantes.RowHeadersVisible = false;
+            this.dgvEstudiantes.RowTemplate.Height = 65;
+            this.dgvEstudiantes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEstudiantes.Size = new System.Drawing.Size(887, 427);
+            this.dgvEstudiantes.TabIndex = 1;
+            // 
+            // colNombre
+            // 
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(85)))), ((int)(((byte)(104)))));
+            this.colNombre.DefaultCellStyle = dataGridViewCellStyle22;
+            this.colNombre.HeaderText = "Nombre completo";
+            this.colNombre.Name = "colNombre";
+            // 
+            // colCedula
+            // 
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.colCedula.DefaultCellStyle = dataGridViewCellStyle23;
+            this.colCedula.HeaderText = "Cédula";
+            this.colCedula.Name = "colCedula";
+            // 
+            // colTelefono
+            // 
+            this.colTelefono.HeaderText = "Teléfono";
+            this.colTelefono.Name = "colTelefono";
+            // 
+            // colFechaIngreso
+            // 
+            this.colFechaIngreso.HeaderText = "Fecha ingreso";
+            this.colFechaIngreso.Name = "colFechaIngreso";
+            // 
+            // colEstadoTexto
+            // 
+            this.colEstadoTexto.HeaderText = "Estado";
+            this.colEstadoTexto.Name = "colEstadoTexto";
+            // 
+            // colAcciones
+            // 
+            this.colAcciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.colAcciones.HeaderText = "Acciones";
+            this.colAcciones.Name = "colAcciones";
+            this.colAcciones.Text = "Eliminar";
+            this.colAcciones.UseColumnTextForButtonValue = true;
             // 
             // panel1
             // 
@@ -477,26 +611,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(887, 110);
             this.panel1.TabIndex = 0;
-            // 
-            // lblBuscarEstudiante
-            // 
-            this.lblBuscarEstudiante.AutoSize = true;
-            this.lblBuscarEstudiante.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarEstudiante.ForeColor = System.Drawing.Color.DimGray;
-            this.lblBuscarEstudiante.Location = new System.Drawing.Point(31, 10);
-            this.lblBuscarEstudiante.Name = "lblBuscarEstudiante";
-            this.lblBuscarEstudiante.Size = new System.Drawing.Size(53, 17);
-            this.lblBuscarEstudiante.TabIndex = 0;
-            this.lblBuscarEstudiante.Text = "Buscar:";
-            // 
-            // txtBuscarEstudiante
-            // 
-            this.txtBuscarEstudiante.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBuscarEstudiante.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarEstudiante.Location = new System.Drawing.Point(93, 9);
-            this.txtBuscarEstudiante.Name = "txtBuscarEstudiante";
-            this.txtBuscarEstudiante.Size = new System.Drawing.Size(250, 27);
-            this.txtBuscarEstudiante.TabIndex = 1;
             // 
             // cmbFiltroEstado
             // 
@@ -515,115 +629,116 @@
             this.cmbFiltroEstado.Size = new System.Drawing.Size(849, 28);
             this.cmbFiltroEstado.TabIndex = 2;
             // 
-            // dgvEstudiantes
+            // txtBuscarEstudiante
             // 
-            this.dgvEstudiantes.AllowUserToAddRows = false;
-            this.dgvEstudiantes.AllowUserToOrderColumns = true;
-            this.dgvEstudiantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvEstudiantes.BackgroundColor = System.Drawing.Color.White;
-            this.dgvEstudiantes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(85)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEstudiantes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEstudiantes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colNombre,
-            this.colCedula,
-            this.colTelefono,
-            this.colFechaIngreso,
-            this.colEstadoTexto,
-            this.colAcciones});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEstudiantes.DefaultCellStyle = dataGridViewCellStyle10;
-            this.dgvEstudiantes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvEstudiantes.EnableHeadersVisualStyles = false;
-            this.dgvEstudiantes.Location = new System.Drawing.Point(3, 113);
-            this.dgvEstudiantes.Margin = new System.Windows.Forms.Padding(20);
-            this.dgvEstudiantes.Name = "dgvEstudiantes";
-            this.dgvEstudiantes.RowHeadersVisible = false;
-            this.dgvEstudiantes.RowTemplate.Height = 65;
-            this.dgvEstudiantes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEstudiantes.Size = new System.Drawing.Size(887, 427);
-            this.dgvEstudiantes.TabIndex = 1;
+            this.txtBuscarEstudiante.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBuscarEstudiante.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarEstudiante.Location = new System.Drawing.Point(93, 9);
+            this.txtBuscarEstudiante.Name = "txtBuscarEstudiante";
+            this.txtBuscarEstudiante.Size = new System.Drawing.Size(250, 27);
+            this.txtBuscarEstudiante.TabIndex = 1;
             // 
-            // dataGridView1
+            // lblBuscarEstudiante
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(85)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colEstadoIcono,
-            this.colEstudiante,
-            this.colMensualidad,
-            this.colAnualidad});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 154);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.Height = 50;
-            this.dataGridView1.Size = new System.Drawing.Size(887, 386);
-            this.dataGridView1.TabIndex = 3;
+            this.lblBuscarEstudiante.AutoSize = true;
+            this.lblBuscarEstudiante.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscarEstudiante.ForeColor = System.Drawing.Color.DimGray;
+            this.lblBuscarEstudiante.Location = new System.Drawing.Point(31, 10);
+            this.lblBuscarEstudiante.Name = "lblBuscarEstudiante";
+            this.lblBuscarEstudiante.Size = new System.Drawing.Size(53, 17);
+            this.lblBuscarEstudiante.TabIndex = 0;
+            this.lblBuscarEstudiante.Text = "Buscar:";
             // 
-            // colEstadoIcono
+            // tabPagos
             // 
-            this.colEstadoIcono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colEstadoIcono.DefaultCellStyle = dataGridViewCellStyle2;
-            this.colEstadoIcono.HeaderText = "Estado";
-            this.colEstadoIcono.Name = "colEstadoIcono";
-            this.colEstadoIcono.Width = 60;
+            this.tabPagos.Controls.Add(this.dgvPagos);
+            this.tabPagos.Controls.Add(this.cmbFiltroTipoPago);
+            this.tabPagos.Controls.Add(this.cmbFiltroAnio);
+            this.tabPagos.Controls.Add(this.cmbFiltroMes);
+            this.tabPagos.Controls.Add(this.txtBuscarEstudiantePago);
+            this.tabPagos.Controls.Add(this.lblBuscarPago);
+            this.tabPagos.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPagos.Location = new System.Drawing.Point(4, 34);
+            this.tabPagos.Name = "tabPagos";
+            this.tabPagos.Size = new System.Drawing.Size(893, 543);
+            this.tabPagos.TabIndex = 2;
+            this.tabPagos.Text = "PAGOS";
+            this.tabPagos.UseVisualStyleBackColor = true;
             // 
-            // colEstudiante
+            // dgvPagos
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.colEstudiante.DefaultCellStyle = dataGridViewCellStyle3;
-            this.colEstudiante.HeaderText = "Estudiante";
-            this.colEstudiante.Name = "colEstudiante";
+            this.dgvPagos.AllowUserToAddRows = false;
+            this.dgvPagos.AllowUserToOrderColumns = true;
+            this.dgvPagos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvPagos.BackgroundColor = System.Drawing.Color.White;
+            this.dgvPagos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(85)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPagos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            this.dgvPagos.ColumnHeadersHeight = 40;
+            this.dgvPagos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colEstudiantePago,
+            this.colTipoPago,
+            this.colMesPago,
+            this.colAñoPago,
+            this.colMonto,
+            this.colMetodo,
+            this.colRecibo,
+            this.colFecha});
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPagos.DefaultCellStyle = dataGridViewCellStyle14;
+            this.dgvPagos.EnableHeadersVisualStyles = false;
+            this.dgvPagos.GridColor = System.Drawing.Color.Gainsboro;
+            this.dgvPagos.Location = new System.Drawing.Point(8, 206);
+            this.dgvPagos.Name = "dgvPagos";
+            this.dgvPagos.RowHeadersVisible = false;
+            this.dgvPagos.Size = new System.Drawing.Size(877, 329);
+            this.dgvPagos.TabIndex = 8;
+            this.dgvPagos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView2_CellContentClick);
             // 
-            // colMensualidad
+            // cmbFiltroTipoPago
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colMensualidad.DefaultCellStyle = dataGridViewCellStyle4;
-            this.colMensualidad.HeaderText = "Mensualidad";
-            this.colMensualidad.Name = "colMensualidad";
+            this.cmbFiltroTipoPago.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbFiltroTipoPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFiltroTipoPago.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFiltroTipoPago.FormattingEnabled = true;
+            this.cmbFiltroTipoPago.Items.AddRange(new object[] {
+            "Mensualidad",
+            "Anualidad"});
+            this.cmbFiltroTipoPago.Location = new System.Drawing.Point(29, 148);
+            this.cmbFiltroTipoPago.Name = "cmbFiltroTipoPago";
+            this.cmbFiltroTipoPago.Size = new System.Drawing.Size(849, 28);
+            this.cmbFiltroTipoPago.TabIndex = 7;
             // 
-            // colAnualidad
+            // cmbFiltroAnio
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colAnualidad.DefaultCellStyle = dataGridViewCellStyle5;
-            this.colAnualidad.HeaderText = "Anualidad";
-            this.colAnualidad.Name = "colAnualidad";
+            this.cmbFiltroAnio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbFiltroAnio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFiltroAnio.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFiltroAnio.FormattingEnabled = true;
+            this.cmbFiltroAnio.Items.AddRange(new object[] {
+            "2026",
+            "2027",
+            "2028"});
+            this.cmbFiltroAnio.Location = new System.Drawing.Point(30, 105);
+            this.cmbFiltroAnio.Name = "cmbFiltroAnio";
+            this.cmbFiltroAnio.Size = new System.Drawing.Size(849, 28);
+            this.cmbFiltroAnio.TabIndex = 6;
             // 
             // cmbFiltroMes
             // 
@@ -836,9 +951,10 @@
             // 
             // colFecha
             // 
-            this.colFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.colFecha.HeaderText = "Fecha de pago";
             this.colFecha.Name = "colFecha";
+            this.colFecha.Width = 136;
             // 
             // FrmDashboard
             // 
@@ -856,6 +972,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picEstrella)).EndInit();
             this.tbcNavegacionPrincipal.ResumeLayout(false);
             this.tabDashboard.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnlAcciones.ResumeLayout(false);
             this.pnlEstados.ResumeLayout(false);
             this.pnlEstados.PerformLayout();
@@ -864,12 +981,11 @@
             this.pnlHerramientas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLupa)).EndInit();
             this.tabEstudiantes.ResumeLayout(false);
-            this.tabPagos.ResumeLayout(false);
-            this.tabPagos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiantes)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiantes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPagos.ResumeLayout(false);
+            this.tabPagos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPagos)).EndInit();
             this.ResumeLayout(false);
 
