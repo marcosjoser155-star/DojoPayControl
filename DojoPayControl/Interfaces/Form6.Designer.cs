@@ -34,8 +34,8 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.txtObservacionAusencia = new System.Windows.Forms.TextBox();
             this.lblCampoObservacion = new System.Windows.Forms.Label();
-            this.dtpFechaInicioAusencia = new System.Windows.Forms.DateTimePicker();
-            this.lblFechaInicio = new System.Windows.Forms.Label();
+            this.dtpFechaInicioReactivacion = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaInicioReactivacion = new System.Windows.Forms.Label();
             this.cmbEstudiante = new System.Windows.Forms.ComboBox();
             this.lblCampoEstudiante = new System.Windows.Forms.Label();
             this.pnlBannerInformativo = new System.Windows.Forms.Panel();
@@ -118,25 +118,25 @@
             this.lblCampoObservacion.TabIndex = 28;
             this.lblCampoObservacion.Text = "Observación";
             // 
-            // dtpFechaInicioAusencia
+            // dtpFechaInicioReactivacion
             // 
-            this.dtpFechaInicioAusencia.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaInicioAusencia.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaInicioAusencia.Location = new System.Drawing.Point(32, 306);
-            this.dtpFechaInicioAusencia.Name = "dtpFechaInicioAusencia";
-            this.dtpFechaInicioAusencia.Size = new System.Drawing.Size(350, 33);
-            this.dtpFechaInicioAusencia.TabIndex = 24;
+            this.dtpFechaInicioReactivacion.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaInicioReactivacion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaInicioReactivacion.Location = new System.Drawing.Point(32, 306);
+            this.dtpFechaInicioReactivacion.Name = "dtpFechaInicioReactivacion";
+            this.dtpFechaInicioReactivacion.Size = new System.Drawing.Size(350, 33);
+            this.dtpFechaInicioReactivacion.TabIndex = 24;
             // 
-            // lblFechaInicio
+            // lblFechaInicioReactivacion
             // 
-            this.lblFechaInicio.AutoSize = true;
-            this.lblFechaInicio.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaInicio.ForeColor = System.Drawing.Color.DimGray;
-            this.lblFechaInicio.Location = new System.Drawing.Point(29, 275);
-            this.lblFechaInicio.Name = "lblFechaInicio";
-            this.lblFechaInicio.Size = new System.Drawing.Size(176, 17);
-            this.lblFechaInicio.TabIndex = 22;
-            this.lblFechaInicio.Text = "Fecha de inicio de ausencia";
+            this.lblFechaInicioReactivacion.AutoSize = true;
+            this.lblFechaInicioReactivacion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaInicioReactivacion.ForeColor = System.Drawing.Color.DimGray;
+            this.lblFechaInicioReactivacion.Location = new System.Drawing.Point(29, 275);
+            this.lblFechaInicioReactivacion.Name = "lblFechaInicioReactivacion";
+            this.lblFechaInicioReactivacion.Size = new System.Drawing.Size(197, 17);
+            this.lblFechaInicioReactivacion.TabIndex = 22;
+            this.lblFechaInicioReactivacion.Text = "Fecha de inicio de reactivación";
             // 
             // cmbEstudiante
             // 
@@ -206,7 +206,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(909, 46);
             this.panel2.TabIndex = 18;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
             // 
             // pictureBox2
             // 
@@ -270,8 +269,8 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.txtObservacionAusencia);
             this.Controls.Add(this.lblCampoObservacion);
-            this.Controls.Add(this.dtpFechaInicioAusencia);
-            this.Controls.Add(this.lblFechaInicio);
+            this.Controls.Add(this.dtpFechaInicioReactivacion);
+            this.Controls.Add(this.lblFechaInicioReactivacion);
             this.Controls.Add(this.cmbEstudiante);
             this.Controls.Add(this.lblCampoEstudiante);
             this.Controls.Add(this.pnlBannerInformativo);
@@ -280,7 +279,6 @@
             this.MinimumSize = new System.Drawing.Size(785, 575);
             this.Name = "FrmReactivarEstudiante";
             this.Text = "Form6";
-            this.Load += new System.EventHandler(this.Form6_Load);
             this.panel3.ResumeLayout(false);
             this.pnlBannerInformativo.ResumeLayout(false);
             this.pnlBannerInformativo.PerformLayout();
@@ -303,8 +301,8 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TextBox txtObservacionAusencia;
         private System.Windows.Forms.Label lblCampoObservacion;
-        private System.Windows.Forms.DateTimePicker dtpFechaInicioAusencia;
-        private System.Windows.Forms.Label lblFechaInicio;
+        private System.Windows.Forms.DateTimePicker dtpFechaInicioReactivacion;
+        private System.Windows.Forms.Label lblFechaInicioReactivacion;
         private System.Windows.Forms.ComboBox cmbEstudiante;
         private System.Windows.Forms.Label lblCampoEstudiante;
         private System.Windows.Forms.Panel pnlBannerInformativo;

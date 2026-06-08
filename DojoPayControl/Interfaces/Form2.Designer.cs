@@ -1,4 +1,4 @@
-﻿namespace DojoPayControl.Interfaces
+﻿namespace DojoPayControl
 {
     partial class FrmDashboard
     {
@@ -614,7 +614,7 @@
             // 
             // cmbFiltroEstado
             // 
-            this.cmbFiltroEstado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cmbFiltroEstado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbFiltroEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFiltroEstado.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -742,7 +742,7 @@
             // 
             // cmbFiltroMes
             // 
-            this.cmbFiltroMes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cmbFiltroMes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbFiltroMes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFiltroMes.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -784,6 +784,121 @@
             this.lblBuscarPago.Size = new System.Drawing.Size(53, 17);
             this.lblBuscarPago.TabIndex = 3;
             this.lblBuscarPago.Text = "Buscar:";
+            // 
+            // cmbFiltroAnio
+            // 
+            this.cmbFiltroAnio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbFiltroAnio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFiltroAnio.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFiltroAnio.FormattingEnabled = true;
+            this.cmbFiltroAnio.Items.AddRange(new object[] {
+            "2026",
+            "2027",
+            "2028"});
+            this.cmbFiltroAnio.Location = new System.Drawing.Point(30, 105);
+            this.cmbFiltroAnio.Name = "cmbFiltroAnio";
+            this.cmbFiltroAnio.Size = new System.Drawing.Size(849, 28);
+            this.cmbFiltroAnio.TabIndex = 6;
+            // 
+            // cmbFiltroTipoPago
+            // 
+            this.cmbFiltroTipoPago.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbFiltroTipoPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFiltroTipoPago.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFiltroTipoPago.FormattingEnabled = true;
+            this.cmbFiltroTipoPago.Items.AddRange(new object[] {
+            "Mensualidad",
+            "Anualidad"});
+            this.cmbFiltroTipoPago.Location = new System.Drawing.Point(29, 148);
+            this.cmbFiltroTipoPago.Name = "cmbFiltroTipoPago";
+            this.cmbFiltroTipoPago.Size = new System.Drawing.Size(849, 28);
+            this.cmbFiltroTipoPago.TabIndex = 7;
+            // 
+            // dgvPagos
+            // 
+            this.dgvPagos.AllowUserToAddRows = false;
+            this.dgvPagos.AllowUserToOrderColumns = true;
+            this.dgvPagos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvPagos.BackgroundColor = System.Drawing.Color.White;
+            this.dgvPagos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(85)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPagos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvPagos.ColumnHeadersHeight = 40;
+            this.dgvPagos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colEstudiantePago,
+            this.colTipoPago,
+            this.colMesPago,
+            this.colAñoPago,
+            this.colMonto,
+            this.colMetodo,
+            this.colRecibo,
+            this.colFecha});
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPagos.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dgvPagos.EnableHeadersVisualStyles = false;
+            this.dgvPagos.GridColor = System.Drawing.Color.Gainsboro;
+            this.dgvPagos.Location = new System.Drawing.Point(8, 206);
+            this.dgvPagos.Name = "dgvPagos";
+            this.dgvPagos.RowHeadersVisible = false;
+            this.dgvPagos.Size = new System.Drawing.Size(877, 329);
+            this.dgvPagos.TabIndex = 8;
+            this.dgvPagos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // colAcciones
+            // 
+            this.colAcciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.colAcciones.HeaderText = "Acciones";
+            this.colAcciones.Name = "colAcciones";
+            this.colAcciones.Text = "Eliminar";
+            this.colAcciones.UseColumnTextForButtonValue = true;
+            // 
+            // colEstadoTexto
+            // 
+            this.colEstadoTexto.HeaderText = "Estado";
+            this.colEstadoTexto.Name = "colEstadoTexto";
+            // 
+            // colFechaIngreso
+            // 
+            this.colFechaIngreso.HeaderText = "Fecha ingreso";
+            this.colFechaIngreso.Name = "colFechaIngreso";
+            // 
+            // colTelefono
+            // 
+            this.colTelefono.HeaderText = "Teléfono";
+            this.colTelefono.Name = "colTelefono";
+            // 
+            // colCedula
+            // 
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.colCedula.DefaultCellStyle = dataGridViewCellStyle9;
+            this.colCedula.HeaderText = "Cédula";
+            this.colCedula.Name = "colCedula";
+            // 
+            // colNombre
+            // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(85)))), ((int)(((byte)(104)))));
+            this.colNombre.DefaultCellStyle = dataGridViewCellStyle8;
+            this.colNombre.HeaderText = "Nombre completo";
+            this.colNombre.Name = "colNombre";
             // 
             // colEstudiantePago
             // 

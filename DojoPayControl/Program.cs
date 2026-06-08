@@ -17,7 +17,9 @@ namespace DojoPayControl
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmReactivarEstudiante ());
+
+            // El sistema debe iniciar primero en el login
+            Application.Run(new FrmLogin());
         }
     }
 }

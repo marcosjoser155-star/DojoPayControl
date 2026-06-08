@@ -41,7 +41,7 @@
             this.txtNumRecibo = new System.Windows.Forms.TextBox();
             this.cmbMetodoPago = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblMontoAPagar = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -49,7 +49,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbMes = new System.Windows.Forms.ComboBox();
             this.numAnio = new System.Windows.Forms.NumericUpDown();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -166,7 +166,6 @@
             this.panel2.Padding = new System.Windows.Forms.Padding(25);
             this.panel2.Size = new System.Drawing.Size(834, 526);
             this.panel2.TabIndex = 6;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
             // 
             // label10
             // 
@@ -220,24 +219,24 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(255)))), ((int)(((byte)(244)))));
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.label8);
+            this.panel5.Controls.Add(this.lblMontoAPagar);
             this.panel5.Controls.Add(this.label7);
             this.panel5.Location = new System.Drawing.Point(26, 338);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(784, 50);
             this.panel5.TabIndex = 12;
             // 
-            // label8
+            // lblMontoAPagar
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(133)))), ((int)(((byte)(90)))));
-            this.label8.Location = new System.Drawing.Point(716, 8);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 25);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "40.00";
+            this.lblMontoAPagar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMontoAPagar.AutoSize = true;
+            this.lblMontoAPagar.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMontoAPagar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(133)))), ((int)(((byte)(90)))));
+            this.lblMontoAPagar.Location = new System.Drawing.Point(716, 8);
+            this.lblMontoAPagar.Name = "lblMontoAPagar";
+            this.lblMontoAPagar.Size = new System.Drawing.Size(61, 25);
+            this.lblMontoAPagar.TabIndex = 14;
+            this.lblMontoAPagar.Text = "40.00";
             // 
             // label7
             // 
@@ -282,7 +281,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label5, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label4, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.cmbMes, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.numAnio, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 2, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(26, 232);
@@ -292,7 +291,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 53);
             this.tableLayoutPanel1.TabIndex = 11;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.TableLayoutPanel1_Paint);
             // 
             // label5
             // 
@@ -327,12 +325,12 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Mes";
             // 
-            // comboBox2
+            // cmbMes
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cmbMes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMes.FormattingEnabled = true;
+            this.cmbMes.Items.AddRange(new object[] {
             "Enero",
             "Febrero",
             "Marzo",
@@ -345,10 +343,10 @@
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.comboBox2.Location = new System.Drawing.Point(3, 18);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(258, 23);
-            this.comboBox2.TabIndex = 10;
+            this.cmbMes.Location = new System.Drawing.Point(3, 18);
+            this.cmbMes.Name = "cmbMes";
+            this.cmbMes.Size = new System.Drawing.Size(258, 23);
+            this.cmbMes.TabIndex = 10;
             // 
             // numAnio
             // 
@@ -583,7 +581,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbMes;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown numAnio;
@@ -592,7 +590,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblMontoAPagar;
         private System.Windows.Forms.TextBox txtNumRecibo;
         private System.Windows.Forms.ComboBox cmbMetodoPago;
         private System.Windows.Forms.Label label10;
