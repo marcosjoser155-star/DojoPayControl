@@ -34,7 +34,15 @@ CREATE TABLE IF NOT EXISTS Usuario (
     contrasena VARCHAR(255) NOT NULL,
     rol VARCHAR(30) NOT NULL
 );
+/* ============================================================
+   USUARIO INICIAL PARA PROBAR EL LOGIN
+   ============================================================ */
 
+INSERT INTO Usuario (usuario, contrasena, rol)
+VALUES ('instructor01', '1234', 'Administrador')
+ON DUPLICATE KEY UPDATE
+    contrasena = '1234',
+    rol = 'Administrador';
 /* ============================================================
    TABLA: Estudiante
    Guarda los datos principales de cada estudiante.
@@ -547,3 +555,4 @@ CALL ActualizarEstadosEstudiantes();
 SHOW TABLES;
 
 SELECT * FROM Usuario;
+

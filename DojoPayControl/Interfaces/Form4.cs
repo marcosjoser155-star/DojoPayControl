@@ -86,7 +86,7 @@ namespace DojoPayControl.Interfaces
             txtNumRecibo.Clear();
 
             // Monto inicial
-            lblMontoAPagar.Text = "Monto a pagar: B/. 0.00";
+            lblMontoAPagar.Text = "0.00";
         }
 
         private void CargarEstudiantes()
@@ -147,7 +147,7 @@ namespace DojoPayControl.Interfaces
         {
             decimal monto = ObtenerMontoAPagar();
 
-            lblMontoAPagar.Text = "Monto a pagar: B/. " + monto.ToString("0.00");
+            lblMontoAPagar.Text = monto.ToString("0.00");
         }
 
         private decimal ObtenerMontoAPagar()
